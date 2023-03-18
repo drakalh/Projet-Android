@@ -5,7 +5,8 @@ import androidx.room.PrimaryKey
 
 @Entity
 class Student {
-    @PrimaryKey var id: Int = 0
+    @PrimaryKey
+    var id: Int = 0
 
     var lastname: String = ""
     var firstname: String = ""
