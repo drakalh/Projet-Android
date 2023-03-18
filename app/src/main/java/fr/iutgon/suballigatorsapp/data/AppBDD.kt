@@ -4,6 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import fr.iutgon.suballigatorsapp.data.dao.FormationDAO
+import fr.iutgon.suballigatorsapp.data.dao.InitiatorDAO
+import fr.iutgon.suballigatorsapp.data.dao.SessionDAO
+import fr.iutgon.suballigatorsapp.data.dao.StudentDAO
 import fr.iutgon.suballigatorsapp.entities.Formation
 import fr.iutgon.suballigatorsapp.entities.Initiator
 import fr.iutgon.suballigatorsapp.entities.Session
@@ -15,6 +19,9 @@ import fr.iutgon.suballigatorsapp.entities.Student
 )
 abstract class AppBDD : RoomDatabase() {
     abstract fun studentDAO(): StudentDAO
+    abstract fun initiatorDAO(): InitiatorDAO
+    abstract fun formationDAO(): FormationDAO
+    abstract fun sessionDAO(): SessionDAO
 
     companion object {
         private var instance: AppBDD? = null
