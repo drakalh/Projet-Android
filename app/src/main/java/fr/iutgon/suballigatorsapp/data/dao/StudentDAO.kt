@@ -15,6 +15,6 @@ interface StudentDAO {
     @Update
     fun update(vararg student: Student)
 
-    @Query("SELECT * FROM students")
+    @Query("SELECT * FROM Student")
     fun getAll(): Cursor
 }

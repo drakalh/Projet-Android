@@ -15,6 +15,6 @@ interface SessionDAO {
     @Update
     fun update(vararg session: Session)
 
-    @Query("SELECT * FROM sessions")
+    @Query("SELECT * FROM session")
     fun getAll(): Cursor
 }

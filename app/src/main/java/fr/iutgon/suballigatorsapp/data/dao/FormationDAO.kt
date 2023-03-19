@@ -15,6 +15,6 @@ interface FormationDAO {
     @Update
     fun update(vararg formation: Formation)
 
-    @Query("SELECT * FROM formations")
+    @Query("SELECT * FROM Formation")
     fun getAll(): Cursor
 }

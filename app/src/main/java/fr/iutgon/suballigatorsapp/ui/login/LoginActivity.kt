@@ -15,12 +15,13 @@ import android.widget.Toast
 import fr.iutgon.suballigatorsapp.databinding.ActivityLoginBinding
 
 import fr.iutgon.suballigatorsapp.R
+import fr.iutgon.suballigatorsapp.data.AppBDD
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var loginViewModel: LoginViewModel
     private lateinit var binding: ActivityLoginBinding
-
+    private lateinit var BDD:AppBDD
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -112,6 +113,12 @@ class LoginActivity : AppCompatActivity() {
     private fun showLoginFailed(@StringRes errorString: Int) {
         Toast.makeText(applicationContext, errorString, Toast.LENGTH_SHORT).show()
     }
+
+    fun accessDatabase()
+    {
+        BDD = AppBDD.getInstance(this.applicationContext)
+    }
+
 }
 
 /**

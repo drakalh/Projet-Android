@@ -15,6 +15,6 @@ interface InitiatorDAO {
     @Update
     fun update(vararg initiator: Initiator)
 
-    @Query("SELECT * FROM initiators")
+    @Query("SELECT * FROM Initiator")
     fun getAll(): Cursor
 }
